@@ -1,0 +1,49 @@
+Beta 3.13
+
+Tag-Along Todd:
+
+    Dateline:  Your front yard, Spring 1983
+
+    It's windy outside, and you're outside cleaning the yard.  Every so
+    often, the wind blows a 12-pack of empty pop cans into your yard
+    from the neighbor's yard.  You're minding your business cleaning the
+    yard, but Todd wants to play.  Your family got an Intellivision for
+    Christmas, and now you're the coolest kid on the block.  Todd's been
+    hanging around you ever since.
+
+    You really don't want to play with Todd, but your mom said to
+    play nice.  So if Todd catches up to you, too bad -- you're playing
+    with Todd today.  (At least maybe you can play Tennis or Baseball
+    now that you'll have a second player.  Baseball's cool.  And Todd
+    doesn't know how to steal bases like you do. *evil grin*)
+
+    But really, you just want those pop cans.  Hey, at $0.10 a can
+    refund, you might be able to get a 1 player game like Star Strike.
+
+    See how many cans you can clean up while completely avoiding Todd.
+
+
+- What is new since release 2a:
+
+ * New color schemes on the title, menu, and game screens
+ * New graphics: characters, fence, grass
+ * Characters are animated when running
+ * Fence starts off on the top row and moves down one row each time you clear the screen of cans
+ * Grass grows each time you clear the screen of cans
+ * Different game screen when the Intellivoice is present; last row is used for play
+ * Updated and added voice phrases
+ * When used with the Intellivoice, the countdown will be verbal when the time left is 10 or less
+ * Score only shows when you do not get caught by Todd and time runs out
+ * Skill increase after every game completed. Initial level is set to 3
+ * Duration no longer resets to 5 after every game played. Initial level is set to 4
+
+
+- On my to-do list:
+
+ * Add obstacles in the lawn
+
+ * Add distractions to stop Todd from chasing you
+
+ * Add more sound effects and music
+
+ * Ability to get bonus time
