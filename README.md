@@ -23,3 +23,7 @@ The serial number [database](https://www.intellivisionrevolution.com/serial-numb
 ### Emulators
 
 Best is [this](http://spatula-city.org/~im14u2c/intv/) site. Requires [SDL](https://github.com/libsdl-org/SDL/releases/tag/release-3.4.16)
+
+### Sources
+
+Intellivision [us](https://intellivision.us/history.php)
