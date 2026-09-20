@@ -18,6 +18,8 @@ A 2609 made in Hong Kong should be an Intellivision for the Canadian market and 
 
 As far as I know they should all have the same Exec ROM inside, and the same sound chip. Over time there were some minor changes to the mainboard e.g. number of ram chips. There were also sone changes with the power supply board as indicated by the maintenance guide. Not sure if that has anything to do with some models saying 15W others 18W.
 
+The serial number [database](https://www.intellivisionrevolution.com/serial-number-database-mattel-intellivision).
+
 ### Emulators
 
 Best is [this](http://spatula-city.org/~im14u2c/intv/) site. Requires [SDL](https://github.com/libsdl-org/SDL/releases/tag/release-3.4.16)
