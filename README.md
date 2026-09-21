@@ -27,3 +27,7 @@ Best is [this](http://spatula-city.org/~im14u2c/intv/) site. Requires [SDL](http
 ### Sources
 
 Intellivision [us](https://intellivision.us/history.php)
+
+### CP1600 documentation
+
+The `docs` folder includes an extracted Osborne CP1600 chapter, the original May 1975 CP-1600 User’s Manual, and agent-oriented Markdown references. Start with [CP1600-Agent-Index.md](docs/CP1600-Agent-Index.md) for instruction mnemonics, register/addressing behavior, bus signals, CP1680 I/O, and links to the detailed sources.
