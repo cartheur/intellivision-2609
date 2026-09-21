@@ -7,5 +7,6 @@ Intellivision 2609 autonomous player - Where everyone who has interest can play 
 21.09.2026
     1031: Such an innovation is also suitable for the Intellivision, except will need support for the keypad.
     1114: Assimilating the corpus of documents gathered last evening.
+    1122: Finished with work in here.
     
     
