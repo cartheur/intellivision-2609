@@ -123,11 +123,12 @@ measured behavior of the target hardware.
 - `ProjectNotes.txt` is the September 2026 lab log for an autonomous player.
   It records a working LED-indicated joystick-control circuit and the intended
   extension to Intellivision keypad support.
-- `custom/README.md` specifies a proposed 44-pin cartridge serial interface:
-  address latching and decoding, data transceivers, UART and RS-232 options, a
-  register map, staged bring-up, polling software, and bus-safety constraints.
-  It is a proposal and should be checked against the primary CPU and console
-  documentation before connecting hardware.
+- `custom/README.md` is the design brief for a proposed ECS-connected computer
+  system. It defines the intended console/ECS/new-system relationship, records
+  the interface evidence that must be established, and uses a memory-mapped
+  serial monitor as its staged first subsystem. It should be checked against
+  ECS-specific material, the primary CPU references, and the target hardware
+  before anything is connected.
 
 ## Source hierarchy
 
