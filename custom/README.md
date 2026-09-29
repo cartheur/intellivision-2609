@@ -61,7 +61,7 @@ never produces a safe interface.
 Serial I/O is the best initial capability. It provides diagnostic output, a
 monitor, program loading, and eventually host-assisted storage, while keeping
 the first hardware small. It begins as a memory-mapped peripheral under
-console-CPU control.
+console-CPU control. There is an option to modernize such a setup by using a Teensy v4.1 microcontroller.
 
 ```text
 Verified Intellivision II / ECS interface
@@ -79,15 +79,14 @@ Verified Intellivision II / ECS interface
 
 ### Prototype hardware
 
-- 74LS373 or 74LS374 address latch
+- 74LS373 address latch
 - Two 74LS245 devices for the 16-bit bidirectional data path
-- 74LS138 or 74LS154 address decoder
+- 74LS138 address decoder
 - 74LS00, 74LS08, and 74LS32 control logic as required
 - 6850 ACIA, 8251 USART, or another timing-compatible 5 V UART
-- MAX232 or equivalent true RS-232 level converter
-- Optional 74LS244 status/control buffer
-- A verified regulated 5 V supply arrangement, bypass capacitors at each IC,
-  and bulk capacitance at the board input
+- MAX232 true RS-232 level converter
+- 74LS244 status/control buffer
+- A verified regulated 5 V supply arrangement, 0.1uF capacitors at each IC, and bulk capacitance at the board input
 
 The address must be latched before the multiplexed bus becomes data. The data
 transceivers must remain disabled unless the peripheral is selected, and read
