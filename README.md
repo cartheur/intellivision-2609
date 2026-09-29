@@ -8,6 +8,13 @@ _When 8-bits isn't wide enough_
 
 Soon we will expand thusly to 18-bits.
 
+### Documentation index
+
+The repository-wide [documentation summary](DOCUMENTATION-SUMMARY.md) provides
+contextual, plain-text summaries of the console manuals, CP1600 references,
+engineering archives, development resources, ROM collection, and current
+hardware work.
+
 ### Identification
 
 The 2609A should be Intellivisions manufactured in Hong Kong (or Taiwan) for the US market. Serial numbers are larger than 300k.
