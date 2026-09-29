@@ -11,6 +11,10 @@ memory, I/O, storage or host communication, and system software.
 or II with ECS. It keeps both as separate validation targets until their actual
 interface contracts prove compatible.
 
+`suitable-build.md` is the concise checklist for the first safe serial-monitor
+board: prerequisites, components, software, validation sequence, and deferred
+features.
+
 ## Intended shape
 
 ```text
