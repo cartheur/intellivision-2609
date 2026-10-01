@@ -10,4 +10,5 @@ Intellivision 2609 autonomous player - Where everyone who has interest can play 
     1122: Finished with work in here.
 29.09.2026
     1354: I have as much preparation ready for these series of podcast episodes. Rub is what to use and where; given the near equivalency of the graphics aspect, it will evolve naturally out of the process.
-    
+01.10.2026
+    1102: Established the sets of ROMs for the "os" layer.    
