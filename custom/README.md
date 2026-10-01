@@ -1,5 +1,11 @@
 # Custom ECS-connected computer system
 
+## Related notes
+
+- [Master Component rebuild readiness](MASTER-COMPONENT-REBUILD-READINESS.md)
+  distinguishes the preserved console firmware and documentation from the
+  implementation artifacts still needed for a source-buildable #2609 replica.
+
 This project proposes a new computer system that works alongside an
 Intellivision I or II with its Entertainment Computer System (ECS). The objective is
 to extend the console into a practical computer environment without treating
