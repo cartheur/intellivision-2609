@@ -12,3 +12,6 @@ Intellivision 2609 autonomous player - Where everyone who has interest can play 
     1354: I have as much preparation ready for these series of podcast episodes. Rub is what to use and where; given the near equivalency of the graphics aspect, it will evolve naturally out of the process.
 01.10.2026
     1102: Established the sets of ROMs for the "os" layer.    
+06.10.2026
+    1731: Removed sdk and emulator code since already parsed into the organization as separate entities.
+    
