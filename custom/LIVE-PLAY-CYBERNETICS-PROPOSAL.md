@@ -33,6 +33,35 @@ That is a stronger and more useful claim than calling a board or a trained model
 "intelligent." It supports comparison between a fixed rule set, a learned host
 policy, and a human opponent while leaving the original game machine intact.
 
+## First intelligence threshold: intuitive programs
+
+The first goal is not a claim of general machine intelligence. It is an
+**intuitive program**: a bounded program that learns or encodes which features
+of a live situation are worth treating as candidates for action, ranks a small
+set of permitted moves, and revises that tendency from observed consequences.
+
+For a maze task, that begins with a deliberately modest loop:
+
+```text
+frame/history → relevant differences → candidate moves → ranked choice
+              → bounded action → observed consequence → revised tendency
+```
+
+The program may be hand-built at first (for example, wall following, target
+seeking, or exploration bias), learned on a host later, or hybrid. In every
+case, the edge system retains the stronger cybernetic discipline:
+
+- action candidates are limited by the current state and safety authority;
+- an intuitive ranking is not treated as a sufficient reason to actuate;
+- the selected candidate, available rejected alternatives, policy version, and
+  outcome remain part of the trace;
+- surprise, contradiction, timeout, or low confidence produces a named pause,
+  neutral, or human-takeover state rather than invented certainty.
+
+The intended threshold is practical: the program begins to select what to
+attend to and what to try from experience, while its behaviour remains open to
+reconstruction, criticism, and correction.
+
 ## Cybernetic frame
 
 The proposal adopts six practical readings of the series.
@@ -51,6 +80,12 @@ The resulting discipline is deliberately compatible with modern ML while not
 depending on its opacity: a host learner may propose a policy, but the edge
 system must record the observation, action, timing, policy version, and outcome
 needed to replay and challenge that proposal.
+
+The hardware programme is also conducted with an agent-guided engineering
+shadow: hypotheses, proposed next tests, source checks, captures, corrections,
+and human decisions are preserved as an inspectable record. This serves the
+podcast value of the work while retaining the essential rule that an agent's
+analysis is never accepted as electrical evidence without bench measurement.
 
 ## System boundary
 
@@ -166,23 +201,27 @@ reconstructed.
 
 ## Phased deliverables
 
-1. **Evidence and safety dossier.** Resolve the exact controller electrical
+1. **M6x09 reference acceptance.** Complete its ACIA CTS/serial-monitor
+   acceptance, RAM smoke test, and expansion-header dossier. Use it to prove
+   local trace/daughterboard behavior before duplicating that behavior in new
+   construction.
+2. **Evidence and safety dossier.** Resolve the exact controller electrical
    behaviour, video capture path, power budget, and reset/fault states for the
    particular 2609 hardware. Build passive fixtures first. Treat any ECS
    interface as a separate, corroborative dossier.
-2. **HD6309 bench computer.** Wire-wrap CPU, RAM/ROM, serial monitor, clock,
+3. **HD6309 bench computer.** Wire-wrap CPU, RAM/ROM, serial monitor, clock,
    reset supervisor, LEDs, and a trace-memory test. Verify every bus cycle
    locally before connecting to the console.
-3. **One-way observatory.** Video capture plus timestamped human-controller
+4. **One-way observatory.** Video capture plus timestamped human-controller
    logging; no controller injection and no console-bus driving.
-4. **Fail-safe actuation.** Add optically or otherwise electrically isolated
+5. **Fail-safe actuation.** Add optically or otherwise electrically isolated
    controller emulation, takeover switch, watchdog neutralisation, and a
    recorded authority flag.
-5. **Inspectable agent.** Implement a finite-state maze policy and visualise
+6. **Inspectable agent.** Implement a finite-state maze policy and visualise
    its modes, transitions, state, and trace in real time.
-6. **Host learning loop.** Train/evaluate a policy from recorded trials; retain
+7. **Host learning loop.** Train/evaluate a policy from recorded trials; retain
    model, data-set, firmware, and replay identifiers for each result.
-7. **Optional console mailbox.** Only after evidence permits it, exchange small
+8. **Optional console mailbox.** Only after evidence permits it, exchange small
    structured messages with software executing on the 2609.
 
 ## Falsifiable acceptance criteria

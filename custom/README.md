@@ -15,18 +15,24 @@ corroborative compatibility path, not a prerequisite for the first board.
 ### Primary track: 2609 live-play companion
 
 ```text
-HD6309 wire-wrap board → passive video/controller observation
-                       → isolated controller emulation
-                       → 2609 game and display output
-                       → optional host learning loop
+M6x09-II-SBC → validated monitor / expansion testbed
+             → HD6309 wire-wrap companion
+             → passive video/controller observation
+             → isolated controller emulation
+             → 2609 game and display output
+             → optional host learning loop
 ```
 
-The HD6309 begins as a self-contained bench computer with local RAM/ROM,
-serial diagnostics, timer, trace memory, watchdog, and visible fault state. It
-then supports one-way observation of normal human play. Controller emulation
-comes only after the observation path is validated and must default to neutral,
-with a physical human/machine selector. A console-bus mailbox is optional and
-strictly later work.
+The on-hand M6x09-II-SBC is the immediate reference platform: its 6xC09-family
+socket, RAM, EPROM, ACIA, serial monitor workflow, logic-analyzer record, and
+expansion header let the project validate software and a small daughterboard
+before new construction begins. Its current serial-monitor acceptance must be
+completed before it is trusted as that reference. The HD6309 wire-wrap board
+remains the primary artifact: a self-contained, fully inspectable companion
+with local RAM/ROM, serial diagnostics, trace memory, watchdog, and visible
+fault state. Controller emulation comes only after the observation path is
+validated and must default to neutral, with a physical human/machine selector.
+A console-bus mailbox is optional and strictly later work.
 
 Start here:
 
@@ -34,6 +40,11 @@ Start here:
   defines the traceable machine-play architecture and experiment design.
 - [Pre-prototype readiness](PRE-PROTOTYPE-READINESS.md) gives the four evidence
   gates before active hardware is introduced.
+- [First-approach build](FIRST-APPROACH-BUILD.md) turns the on-hand parts
+  inventory into a staged HD6309 wire-wrap bench build, preceded by the
+  M6x09-II-SBC reference-platform acceptance path.
+- [W65C02SXB live-play specification](W65C02SXB-LIVE-PLAY-SPEC.md) defines an
+  alternative rapid-prototyping path using an SXB and a small XBus daughterboard.
 - [Master Component rebuild readiness](MASTER-COMPONENT-REBUILD-READINESS.md)
   distinguishes preserved console firmware/documentation from artifacts needed
   for a source-buildable #2609 replica.
