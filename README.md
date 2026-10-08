@@ -59,3 +59,7 @@ The set of all manufactured Intellivision systems during the period of Mattel, i
 | Bandai Intellivision | 16287 |
 | Digiplay Intellivision | 5368 |
 | Digiplay II | 5872 |
+
+## Errata
+
+The only known existing 2609 system was described [here](https://intellivisionrevolution.com/entries/intellivision-auction/mega-rare-intellivision-lot-for-sale-).
