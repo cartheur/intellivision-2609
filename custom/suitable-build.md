@@ -1,6 +1,9 @@
-# Suitable first build
+# Suitable first ECS-track build
 
-The suitable first build is a conservative ECS-connected serial-monitor board.
+For the corroborative ECS track, the suitable first build is a conservative
+ECS-connected serial-monitor board. It is not the first build required for the
+primary 2609 live-play companion, which begins with standalone HD6309 bring-up
+and passive controller/video observation.
 It may support an Intellivision I + ECS or an Intellivision II + ECS, but only
 after each target has independently passed interface validation.
 

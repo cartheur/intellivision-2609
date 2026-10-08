@@ -128,11 +128,12 @@ the forbidden one, and leaves an inspectable record.
 ## Hardware principle: no accidental second bus master
 
 The HD6309 board starts as a peripheral, not a peer processor that seizes the
-Intellivision bus. Its early interface should be a small memory-mapped mailbox
-or a fully passive measurement fixture, selected only after the exact 2609/ECS
-signal, voltage, timing, loading, reset, and ownership rules are verified on
-the bench. Bus arbitration is a separate research milestone, not a convenience
-feature.
+Intellivision bus. Its early interface should be external controller/video
+observation or a fully passive measurement fixture. A small memory-mapped
+mailbox is optional later work, selected only after the exact 2609 signal,
+voltage, timing, loading, reset, and ownership rules are verified on the bench.
+An ECS setup may corroborate that work but is not a prerequisite. Bus
+arbitration is a separate research milestone, not a convenience feature.
 
 This preserves the repository's core rule: no active hardware is connected on
 the basis of a plausible pinout alone.
@@ -165,9 +166,10 @@ reconstructed.
 
 ## Phased deliverables
 
-1. **Evidence and safety dossier.** Resolve the exact physical interface,
-   controller electrical behaviour, power budget, and reset/fault states for
-   the particular 2609/ECS hardware. Build passive fixtures first.
+1. **Evidence and safety dossier.** Resolve the exact controller electrical
+   behaviour, video capture path, power budget, and reset/fault states for the
+   particular 2609 hardware. Build passive fixtures first. Treat any ECS
+   interface as a separate, corroborative dossier.
 2. **HD6309 bench computer.** Wire-wrap CPU, RAM/ROM, serial monitor, clock,
    reset supervisor, LEDs, and a trace-memory test. Verify every bus cycle
    locally before connecting to the console.
@@ -199,8 +201,9 @@ reconstructed.
 
 ## Open questions
 
-- Which 2609/ECS revision and controller hardware will serve as the reference
-  bench system?
+- Which 2609 revision and controller hardware will serve as the reference
+  bench system, and what separate ECS configuration—if any—will later be used
+  for corroboration?
 - What is the least invasive way to capture stable, low-latency video frames?
 - Can controller observation/emulation be made entirely external to the
   expansion connector for the initial system?

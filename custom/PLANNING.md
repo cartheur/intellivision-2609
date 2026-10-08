@@ -1,16 +1,19 @@
-# ECS-connected computer system: deployment plan
+# ECS compatibility track: deployment plan
 
 ## Purpose
 
-Develop a new computer subsystem that can be deployed with either an original
-Intellivision I or an Intellivision II and an ECS. The project must not assume
+This is the **corroborative ECS compatibility track** for the custom companion
+project. It develops a new computer subsystem that can be deployed with either
+an original Intellivision I or an Intellivision II and an ECS. It does not gate
+the primary 2609 live-play companion, which begins with external video and
+controller observation. The project must not assume
 that the two consoles have identical electrical expansion behavior. They are
 parallel deployment targets until documentation and measurement establish a
 shared interface contract.
 
-The first deliverable is a safe, console-CPU-controlled serial monitor. It
-proves the interface before expansion RAM, storage, a second processor, or
-other computer services are attempted.
+The first deliverable on this track is a safe, console-CPU-controlled serial
+monitor. It proves the ECS interface before expansion RAM, storage, a second
+processor, or other computer services are attempted.
 
 ## Target policy
 

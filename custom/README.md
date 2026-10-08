@@ -1,171 +1,72 @@
-# Custom ECS-connected computer system
+# Custom Intellivision companion computer
 
-## Related notes
+This directory develops a new, inspectable companion computer for an original
+Intellivision Master Component (model 2609). Its primary purpose is live
+gameplay research: the console runs the game and produces the display; a
+wire-wrapped HD6309 board and a host system observe play, retain a trace of
+decisions, and—only under explicit, fail-safe authority—offer controller input.
 
-- [Master Component rebuild readiness](MASTER-COMPONENT-REBUILD-READINESS.md)
-  distinguishes the preserved console firmware and documentation from the
-  implementation artifacts still needed for a source-buildable #2609 replica.
+The project does **not** begin by assuming an Intellivision II + ECS expansion
+interface. That remains valuable historical and technical work, but it is a
+corroborative compatibility path, not a prerequisite for the first board.
+
+## Two deliberate tracks
+
+### Primary track: 2609 live-play companion
+
+```text
+HD6309 wire-wrap board → passive video/controller observation
+                       → isolated controller emulation
+                       → 2609 game and display output
+                       → optional host learning loop
+```
+
+The HD6309 begins as a self-contained bench computer with local RAM/ROM,
+serial diagnostics, timer, trace memory, watchdog, and visible fault state. It
+then supports one-way observation of normal human play. Controller emulation
+comes only after the observation path is validated and must default to neutral,
+with a physical human/machine selector. A console-bus mailbox is optional and
+strictly later work.
+
+Start here:
+
 - [Live-play cyberneticist working proposal](LIVE-PLAY-CYBERNETICS-PROPOSAL.md)
-  sketches a safe, traceable HD6309/host companion system for observing and
-  participating in original Intellivision gameplay.
+  defines the traceable machine-play architecture and experiment design.
+- [Pre-prototype readiness](PRE-PROTOTYPE-READINESS.md) gives the four evidence
+  gates before active hardware is introduced.
+- [Master Component rebuild readiness](MASTER-COMPONENT-REBUILD-READINESS.md)
+  distinguishes preserved console firmware/documentation from artifacts needed
+  for a source-buildable #2609 replica.
 
-This project proposes a new computer system that works alongside an
-Intellivision I or II with its Entertainment Computer System (ECS). The objective is
-to extend the console into a practical computer environment without treating
-the ECS as incidental: the Intellivision remains the video/game host, the ECS
-contributes keyboard and expansion context, and the new hardware contributes
-memory, I/O, storage or host communication, and system software.
+### Corroborative track: Intellivision II/ECS compatibility
 
-`PLANNING.md` is the deployment plan for supporting either an Intellivision I
-or II with ECS. It keeps both as separate validation targets until their actual
-interface contracts prove compatible.
+The ECS provides important historical keyboard and expansion context. A future
+memory-mapped serial monitor or computer environment may target an
+Intellivision I or II with ECS, but each physical route, address map, timing
+contract, power budget, and bus-ownership rule must be proven independently.
+No ECS result is assumed to establish the safe controller/video path above, and
+no 2609 companion result is assumed to establish an ECS expansion interface.
 
-`suitable-build.md` is the concise checklist for the first safe serial-monitor
-board: prerequisites, components, software, validation sequence, and deferred
-features.
+- [ECS compatibility deployment plan](PLANNING.md) retains the separate,
+  evidence-led plan for I + ECS and II + ECS validation.
+- [ECS serial-monitor suitability notes](suitable-build.md) describe that
+  later, bus-connected first board.
+- [Platform comparison and modification notes](MODS.md) record differences
+  relevant to choosing a corroborative target.
 
-## Intended shape
+## Shared safety rule
 
-```text
-Intellivision II + ECS
-        │
-  verified expansion interface
-        │
-custom computer system
-  ├── memory and address-decode logic
-  ├── console-visible control registers
-  ├── serial / storage interface
-  ├── optional local processing and RAM
-  └── monitor, loader, and applications
-```
+The original console must remain functional when the companion is absent,
+disconnected, unpowered, reset, or faulted. No plausible pinout authorises
+active driving: every used electrical path requires primary evidence and bench
+measurement. The console CPU remains the only assumed bus master; arbitration
+is a separate research problem, never a shortcut.
 
-The first implementation should leave the console CPU as bus master and expose
-small memory-mapped devices. A second processor may be worthwhile later, but
-only after bus arbitration, reset, and software ownership are understood; it
-must not be introduced as an unexamined second bus master.
+## Relationship between the tracks
 
-## What must be established first
-
-The repository has strong console and CP1600 reference material, but it does
-not make an assumed ECS pinout safe. Before an active board is attached, resolve
-these questions with ECS-specific schematics and measurement of the exact
-Intellivision II/ECS pair:
-
-1. Which connector and signals are electrically available?
-2. Which address ranges, expansion selects, interrupts, reset signals, and
-   power rails can be used without colliding with console, ECS, cartridge, or
-   other expansion hardware?
-3. What are the clock, bus-cycle, voltage, loading, and power-current limits?
-4. Who may drive data, request an interrupt, reset a processor, or own the bus
-   in each state?
-5. What role will ECS BASIC, EXEC, and the keyboard play in booting and using
-   the new environment?
-
-The CP1600-family interface has a multiplexed 16-bit address/data path.
-`BC1`, `BC2`, and `BDIR` identify the bus action, so address decoding by itself
-never produces a safe interface.
-
-## First subsystem: serial monitor
-
-Serial I/O is the best initial capability. It provides diagnostic output, a
-monitor, program loading, and eventually host-assisted storage, while keeping
-the first hardware small. It begins as a memory-mapped peripheral under
-console-CPU control. There is an option to modernize such a setup by using a Teensy v4.1 microcontroller.
-
-```text
-Verified Intellivision II / ECS interface
-              │
-      address/data bus interface
-              │
-  address latch, decoder, and bus-control logic
-              │
-      UART or ACIA register interface
-              │
-         RS-232 level converter
-              │
-       terminal or development host
-```
-
-### Prototype hardware
-
-- 74LS373 address latch
-- Two 74LS245 devices for the 16-bit bidirectional data path
-- 74LS138 address decoder
-- 74LS00, 74LS08, and 74LS32 control logic as required
-- 6850 ACIA, 8251 USART, or another timing-compatible 5 V UART
-- MAX232 true RS-232 level converter
-- 74LS244 status/control buffer
-- A verified regulated 5 V supply arrangement, 0.1uF capacitors at each IC, and bulk capacitance at the board input
-
-The address must be latched before the multiplexed bus becomes data. The data
-transceivers must remain disabled unless the peripheral is selected, and read
-and write enables must never overlap.
-
-### Initial register contract
-
-| Offset | Register | Purpose |
-|---:|---|---|
-| `00` | Data | Transmit a character or read one received character. |
-| `01` | Status | Report transmitter and receiver state. |
-| `02` | Control | Configure and control the UART. |
-| `03` | Auxiliary | Reserve for baud-rate or interrupt control. |
-
-The actual addresses are intentionally undecided until an ECS-compatible window
-has been verified. Begin with polling; interrupts can be added once simple
-read/write timing is proven.
-
-### Serial boundary
-
-A UART's TTL signals must not connect directly to a DB9 connector. A MAX232 or
-equivalent performs the voltage conversion. A minimum connection uses transmit,
-receive, and signal ground; the precise TX/RX crossing depends on whether the
-other end is DTE or DCE. A USB TTL adapter is not a substitute for RS-232.
-
-Start with 9600 baud, 8 data bits, no parity, one stop bit, and no hardware flow
-control. If clocking or signal integrity is uncertain, use 1200 baud and two
-stop bits for the first transmit-only test.
-
-## Software roles
-
-- The ECS keyboard and console display provide the local interface.
-- A console-resident loader/driver initializes the first peripheral.
-- A serial monitor supplies diagnostics, program transfer, and host control.
-- A command environment, storage protocol, or BASIC integration follows only
-  after the hardware register contract is stable.
-
-A minimal monitor test initializes the UART, announces readiness, waits for a
-character, and echoes it once the transmitter is ready.
-
-## Staged development
-
-1. **Interface reconnaissance.** Record exact models, ECS revision, connector
-   path, rails, address map, and timing. Do not attach active logic until every
-   used signal has known direction, level, and owner.
-2. **Bus proof.** Respond at one verified address with a fixed read value and
-   check latching, decoding, read timing, bus release, and contention absence.
-3. **Status register.** Add a read-only changing value to validate data
-   direction and register selection.
-4. **Transmit.** Send a known byte or startup message; validate UART clock,
-   baud rate, level conversion, and terminal wiring.
-5. **Receive and monitor.** Echo received data, then add a minimal command and
-   loader protocol.
-6. **Computer services.** Add expansion RAM, storage, ECS-keyboard-aware
-   software, GPIO, or additional serial ports only after the interface is
-   reliably characterized.
-
-## Safety constraints
-
-The interface is timing-sensitive. It shares a multiplexed bus, its control
-signals determine transaction type, and incorrect enable timing can create bus
-contention or damage hardware. Use buffers and transceivers rather than direct
-connections to modern logic; a 74LS157 is a selector, not a tri-state bus
-buffer. Confirm the available power budget rather than assuming a cartridge-era
-budget applies unchanged to the selected ECS connection.
-
-## Outcome
-
-The first board is not the finished computer. It is a carefully bounded proof
-of the ECS interface contract: address latch, decode, read/write timing, bus
-release, and power behavior on the actual Intellivision II/ECS system. Once
-that proof is stable, the same foundation can grow into a keyboard-aware,
-memory- and communications-equipped computer environment.
+The primary track answers the immediate question: can a machine participate in
+live Intellivision gameplay with an accountable record of what it saw, chose,
+and did? The ECS track can later corroborate interface knowledge, provide
+keyboard/software context, and support a more traditional computer environment.
+It must add evidence or capability; it must not become an undocumented
+dependency of the live-play companion.
