@@ -40,6 +40,22 @@ The first LaTeX draft intentionally uses a conventional `article` class and
 standard packages so it can later move to the arXiv `article` template with
 minimal changes.
 
+## Literature position
+
+The paper is adjacent to programmatic reinforcement learning, explainable
+reinforcement learning, and formal/verified decision systems. Its claim should
+not be that policies represented as programs are new. Its proposed novelty is
+an embodied, provenance-first system in which a candidate-ranking policy is
+separated from authority to act, constrained by a physical fault-neutral and
+human-takeover boundary, and evaluated in live legacy-game sequences with an
+end-to-end replayable trace.
+
+The initial survey includes work on gridworld programmatic RL, recent
+interpretable programmatic RL for scheduling, LLM-guided programmatic-policy
+synthesis, interactive temporal explanations for RL, and a recent survey of
+explainable RL. It will need expansion and bibliographic normalization before
+submission.
+
 ## Files
 
 - [First LaTeX draft](intuitive-program.tex)

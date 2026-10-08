@@ -40,6 +40,48 @@ The target game system is an original Intellivision Master Component, model
 The companion observes the game externally and retains structured history. It
 does not begin as a second master of the console bus.
 
+\section{Literature survey and claimed novelty}
+
+The closest technical literature is not a single field but an intersection of
+programmatic reinforcement learning (RL), explainable RL, and formalized action
+constraints. Programmatic RL represents policies as executable programs rather
+than solely as opaque neural networks. Shabadi, Fijalkow, and Matricon study
+programmatic policies for gridworlds, including policy-size bounds and a
+synthesis procedure \cite{shabadi2024}. Liu et al. use an LLM-guided search to
+synthesize programmatic policies in Karel-like tasks \cite{liu2024}. These are
+important precedents for the proposal's use of bounded maze policies, but they
+do not make a physical action boundary or live hardware provenance their
+central object.
+
+Recent work also demonstrates that readable programmatic policies can be useful
+under constrained computation. Hu, Zhang, and Baier's ProRL represents
+scheduling strategies in a domain-specific language, searches a program space,
+and learns parameters while retaining editable policy structure
+\cite{hu2026}. This is especially close to the present proposal's interest in
+small, revisable policies. It differs in task and substrate: scheduling is not
+live play against an original physical game machine, and the work does not
+require a human/machine authority gate at an electrical boundary.
+
+Explainable RL provides the second neighbouring field. Saulières surveys the
+area through the questions of what is explained and how it is explained
+\cite{saulieres2025}. ASQ-IT provides interactive video-based explanations of
+RL behaviour using temporal-logic queries \cite{amitai2025}. Such work is
+valuable for asking questions of an agent after or alongside its operation. The
+present proposal is narrower and more infrastructural: it attempts to make the
+observation, candidate set, authorization, act, verification, and fault state
+native records of the action system itself, rather than explanations generated
+solely after a policy has acted.
+
+The claimed novelty is therefore not that a program can learn a policy, nor
+that an RL policy can be explained. It is an \emph{embodied, provenance-first
+architecture for intuitive programs}. A candidate-ranking policy is separated
+from authorization to act; a physical, fault-neutral boundary and immediate
+human takeover constrain later controller emulation; and a replayable trace
+spans video observation, finite-state context, candidate ranking, authority,
+bounded action, verification, and outcome. The claim remains a design claim
+until the protocol yields live trials. It should be evaluated against the cited
+fields rather than asserted as an unexplored category.
+
 \section{Intuitive programs}
 
 An \emph{intuitive program} identifies task-relevant differences, ranks a small
@@ -145,10 +187,13 @@ The intended threshold is modest but substantive: a machine begins to select
 what to attend to and what to try from experience, while another person can
 still inspect how and why.
 
-\section*{Selected references}
+\section*{Contextual materials}
 \begin{itemize}[leftmargin=1.5em]
 \item The Last Cyberneticist, \href{https://www.spreaker.com/episode/a-machine-must-know-its-next-move--75639925}{``A Machine Must Know Its Next Move,''} 2026.
 \item The Last Cyberneticist, \href{https://www.spreaker.com/episode/from-algebra-to-algorithm-multenions-and-program-synthesis--75480441}{``From Algebra to Algorithm: Multenions and Program Synthesis,''} 2026.
 \end{itemize}
+
+\bibliographystyle{plain}
+\bibliography{references}
 
 \end{document}
