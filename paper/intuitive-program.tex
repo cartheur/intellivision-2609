@@ -1,0 +1,154 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
+
+\title{Toward Accountable Intuition:\\
+A Traceable Live-Play Architecture for Bounded Machine Action on the Intellivision}
+\author{Working draft}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This paper proposes an architecture for bounded machine action in original
+videogame play. An Intellivision Master Component remains the authoritative game
+and display machine. A separate 6x09-family computer, a future wire-wrapped
+HD6309 companion, and a host system observe play, preserve an explicit decision
+trace, and only later offer fail-neutral controller actions. We call the first
+target an \emph{intuitive program}: a bounded program that identifies
+task-relevant differences, ranks permitted candidate actions, and revises that
+tendency from observed consequences. This draft does not claim general
+intelligence or completed learning results.
+\end{abstract}
+
+\section{Introduction}
+
+Machine-learning systems can produce competent play while leaving the route from
+observation to action difficult to inspect. Historical computers can make each
+bit visible while never adapting their behaviour. This project asks whether an
+original videogame platform can support a bounded experiment in which a program
+selects what to attend to while leaving enough evidence for another person to
+reconstruct why an action was permitted.
+
+The target game system is an original Intellivision Master Component, model
+2609. It runs original game software and remains the source of displayed video.
+The companion observes the game externally and retains structured history. It
+does not begin as a second master of the console bus.
+
+\section{Intuitive programs}
+
+An \emph{intuitive program} identifies task-relevant differences, ranks a small
+set of permitted next actions, and revises that ranking from observed
+consequences. It is not thereby general, conscious, or entitled to unrestricted
+control. For a maze-oriented task, the intended loop is:
+
+\begin{center}
+\texttt{frame/history $\rightarrow$ relevant differences $\rightarrow$ candidates
+$\rightarrow$ ranked choice $\rightarrow$ bounded action $\rightarrow$ consequence
+$\rightarrow$ revised tendency.}
+\end{center}
+
+The first policies may be transparent: wall following, target seeking, or
+bounded exploration. A learned host policy may later rank the same candidates.
+A ranking is evidence for a choice, not authority to change hardware state.
+
+\section{Accountable action}
+
+The design makes five commitments:
+
+\begin{enumerate}[leftmargin=1.5em]
+\item A difference becomes a signal only when it can alter a permitted decision.
+\item Comparison is evidence, not an implicit state write.
+\item A candidate is not a physical action until authority and guard conditions
+      have passed.
+\item An act is not established until it has been verified and traced.
+\item Ambiguity, timeout, contradiction, and low confidence produce a named
+      pause, neutral, or human-takeover state.
+\end{enumerate}
+
+The trace is an Ariadne thread: an ordered account of state, candidate,
+selection, action, result, error, or halt. It makes a finite controller open to
+inspection without confusing that controller with proof of general intelligence.
+
+\section{Apparatus}
+
+The Intellivision 2609 runs the original game and must remain functional when
+all companion components are absent, unpowered, reset, or faulted. The M6x09-I
+SBC is the operational 6x09 reference platform for RAM-loaded programs, serial
+traces, timing experiments, and passive daughterboard work; its RS-232 monitor
+path is verified at 19,200 8N1. The wire-wrapped HD6309 board is the primary
+future artifact and transfers only demonstrated behaviour from the reference
+platform. A host computer captures video, archives trials, and optionally
+evaluates candidate-ranking policies. A human player retains immediate takeover
+authority.
+
+The M6x09-II SBC remains a useful diagnostic/design reference, but its ACIA
+serial acceptance is unresolved and it does not gate this experimental path.
+
+\section{Decision and authority contract}
+
+Each machine turn is a transaction:
+
+\begin{center}
+\texttt{target $\rightarrow$ candidate $\rightarrow$ compare $\rightarrow$ guard
+$\rightarrow$ bounded action $\rightarrow$ verify $\rightarrow$ next state or halt.}
+\end{center}
+
+State, timing, fault, and human/machine ownership guards decide whether a
+candidate is lawful. A physical selector exposes Human, Neutral, and Machine
+states. Reset, watchdog timeout, host loss, or fault must return a future
+controller boundary to disabled/neutral. The first experiments contain no
+controller injection: they use external video capture and timestamped human
+input. Controller emulation is later work following direct electrical
+measurement.
+
+\section{Trace, evidence, and agent guidance}
+
+Each trial records frame identifiers or extracted features; current state and
+permitted candidates; candidate ranking and selected action; policy and
+firmware versions; authority source; duration; outcome; and error, timeout,
+neutral, or takeover transitions. Score is not the sole measure of success.
+
+An agent serves as an engineering shadow, not as a source of hardware truth. It
+may organize evidence, cross-check sources, state hypotheses, and propose the
+smallest discriminating test. Each material step preserves the observation and
+conditions, alternatives, human decision, next test, and correction. This
+supports a later podcast account without allowing an agent explanation to become
+untested electrical evidence.
+
+\section{Path to empirical results}
+
+Before this manuscript reports performance or adaptation, the project requires:
+
+\begin{enumerate}[leftmargin=1.5em]
+\item a preserved M6x09-I S-record load and RAM-execution transcript;
+\item a fixed maze-oriented game, configuration, start state, and action set;
+\item a transparent baseline policy;
+\item replayable trials using the stated trace format;
+\item a human or fixed-policy comparison; and
+\item evidence that candidate rankings changed after outcomes.
+\end{enumerate}
+
+Until then, the contribution is an architecture and protocol for testing
+intuitive programs honestly. Once these materials exist, this draft can become
+an arXiv-ready empirical report with reproducible artifacts, figures, related
+work, and an explicit claim audit.
+
+\section{Conclusion}
+
+The intended threshold is modest but substantive: a machine begins to select
+what to attend to and what to try from experience, while another person can
+still inspect how and why.
+
+\section*{Selected references}
+\begin{itemize}[leftmargin=1.5em]
+\item The Last Cyberneticist, \href{https://www.spreaker.com/episode/a-machine-must-know-its-next-move--75639925}{``A Machine Must Know Its Next Move,''} 2026.
+\item The Last Cyberneticist, \href{https://www.spreaker.com/episode/from-algebra-to-algorithm-multenions-and-program-synthesis--75480441}{``From Algebra to Algorithm: Multenions and Program Synthesis,''} 2026.
+\end{itemize}
+
+\end{document}
