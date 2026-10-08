@@ -201,10 +201,11 @@ reconstructed.
 
 ## Phased deliverables
 
-1. **M6x09 reference acceptance.** Complete its ACIA CTS/serial-monitor
-   acceptance, RAM smoke test, and expansion-header dossier. Use it to prove
-   local trace/daughterboard behavior before duplicating that behavior in new
-   construction.
+1. **M6x09-I reference proof.** Preserve its verified RS-232 monitor baseline,
+   complete a known-good S19 RAM application run, and create an
+   expansion-header dossier. Use it to prove local trace/daughterboard behavior
+   before duplicating that behavior in new construction. Keep M6x09-II as a
+   separate diagnostic reference until its ACIA CTS/serial acceptance is solved.
 2. **Evidence and safety dossier.** Resolve the exact controller electrical
    behaviour, video capture path, power budget, and reset/fault states for the
    particular 2609 hardware. Build passive fixtures first. Treat any ECS

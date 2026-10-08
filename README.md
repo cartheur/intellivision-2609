@@ -5,9 +5,9 @@ Intellivision Master Component: its CP1600-family architecture, the Intellivisio
 II and ECS ecosystem, repair material, software, and new hardware experiments.
 
 The immediate project focus is a wire-wrapped HD6309 companion for a 2609 that
-supports live-play research. The on-hand M6x09-II-SBC is its first acceptance
-and daughterboard-test platform; demonstrated behavior then transfers to the
-standalone companion. That companion adds passive video/controller observation
+supports live-play research. The operational on-hand M6x09-I-SBC is its first
+acceptance and daughterboard-test platform; demonstrated behavior then transfers
+to the standalone companion. That companion adds passive video/controller observation
 and later fail-safe controller emulation for real games; a host may supply
 learning and analysis. The 2609 remains the game and display authority. The
 Intellivision II/ECS path is a separate corroborative compatibility track for

@@ -7,30 +7,32 @@ primary physical implementation of the 2609 live-play companion. It uses parts
 recorded in the local `parts-is-parts` inventory to make a self-contained,
 wire-wrapped HD6309 computer that can be validated before it observes or
 interacts with an Intellivision. Its immediate engineering reference is the
-on-hand M6x09-II-SBC, not a second untested computer built in parallel.
+operational on-hand M6x09-I-SBC, not a second untested computer built in
+parallel.
 
 The board's purpose is modest and inspectable: retain state, exchange serial
 messages with a host, record a decision trace, and enforce a bounded,
 fail-safe action contract. The original 2609 remains the game and display
 machine. No console bus or controller line is driven in the initial build.
 
-## First execution platform: M6x09-II-SBC
+## First execution platform: M6x09-I-SBC
 
-Use the existing M6x09-II-SBC to validate the approach before committing its
-logic to wire-wrap. It already supplies a minimal 6xC09-family system with
-RAM, EPROM, 6850 ACIA, serial monitor workflow, and an expansion header. It
-can therefore prove the monitor protocol, trace record format, local register
-decode, and a passive/read-only daughterboard without making the wire-wrap
-board carry every early uncertainty.
+Use the operational M6x09-I-SBC to validate the approach before committing its
+logic to wire-wrap. It supplies a 6xC09-family system with RAM, EPROM, 6850
+ACIA, keypad monitor, verified RS-232 link, 10 ms tick source, and 40-pin
+expansion header. It can therefore prove the monitor protocol, trace record
+format, local register decode, timer behavior, and a passive/read-only
+daughterboard without making the wire-wrap board carry every early uncertainty.
 
-This is not a claim that the M6x09-II-SBC is already accepted as working. Its
-current ASSIST09 candidate has a verified EPROM readback, but terminal
-acceptance remains pending a CTS measurement at the 6850 ACIA. Complete and
-record that measurement, then demonstrate the serial monitor and RAM smoke
-test before using the board as a reference platform.
+The M6x09-I monitor banner, keypad-driven memory dump, LCD, and Linux RS-232
+path are recorded as verified at 19,200 8N1. The next specific proof is a
+known-good S19 RAM load and application run; preserve that transcript as the
+first companion-project evidence. The M6x09-II-SBC remains a useful separate
+reference, but it must not gate this work while its ACIA CTS/serial acceptance
+is unresolved.
 
 ```text
-M6x09-II-SBC serial acceptance → local trace/daughterboard proof
+M6x09-I-SBC S19 RAM-run proof → local trace/daughterboard proof
                               → HD6309 wire-wrap implementation
                               → 2609 observation, then later actuation
 ```
@@ -94,18 +96,18 @@ alone.
 
 ## Build stages
 
-### Stage -1 — M6x09-II-SBC acceptance and proof
+### Stage -1 — M6x09-I-SBC RAM-run and daughterboard proof
 
-1. Measure the M6x09-II-SBC ACIA CTS input as documented in its active debug
-   notes; do not change firmware before preserving that measurement.
-2. Complete terminal acceptance: boot ASSIST09, load the RAM smoke test, and
-   record successful serial upload and execution.
-3. Document the expansion-header pin contract from its schematic and direct
+1. Preserve the existing 19,200 8N1 monitor/banner and keypad-DUMP evidence as
+   the known-good transport baseline.
+2. Load a known-good S19 application into RAM, execute it, and record its
+   expected output or GPIO behavior.
+3. Document the 40-pin expansion-header pin contract from its schematic and direct
    measurement; do not infer a daughterboard interface from header position.
 4. Use a passive/read-only daughterboard to prove a fixed register read and
    then the Target/Candidate trace format.
 
-**Exit evidence:** a working serial monitor, RAM-smoke transcript, measured
+**Exit evidence:** a working serial monitor, S19 RAM-run transcript, measured
 expansion-header dossier, and a repeatable read-only daughterboard test.
 
 ## Agent-guided engineering shadow
@@ -148,7 +150,7 @@ not an unrecorded guess.
 
 ### Stage 0 — paper design and socket map
 
-1. Carry forward only the M6x09-II-SBC behavior that was demonstrated on
+1. Carry forward only the M6x09-I-SBC behavior that was demonstrated on
    hardware; confirm the HD63C09RP pinout, oscillator requirements, reset
    polarity, and bus timing from its primary data sheet.
 2. Draw the complete local schematic, including every power pin, decoupling

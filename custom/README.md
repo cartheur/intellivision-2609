@@ -15,7 +15,7 @@ corroborative compatibility path, not a prerequisite for the first board.
 ### Primary track: 2609 live-play companion
 
 ```text
-M6x09-II-SBC → validated monitor / expansion testbed
+M6x09-I-SBC  → validated monitor / expansion testbed
              → HD6309 wire-wrap companion
              → passive video/controller observation
              → isolated controller emulation
@@ -23,11 +23,12 @@ M6x09-II-SBC → validated monitor / expansion testbed
              → optional host learning loop
 ```
 
-The on-hand M6x09-II-SBC is the immediate reference platform: its 6xC09-family
-socket, RAM, EPROM, ACIA, serial monitor workflow, logic-analyzer record, and
-expansion header let the project validate software and a small daughterboard
-before new construction begins. Its current serial-monitor acceptance must be
-completed before it is trusted as that reference. The HD6309 wire-wrap board
+The operational on-hand M6x09-I-SBC is the immediate reference platform: its
+6xC09-family socket, RAM, EPROM, ACIA, verified RS-232 monitor workflow, and
+40-pin expansion header let the project validate software and a small
+daughterboard before new construction begins. The M6x09-II-SBC remains useful
+as a separate diagnostic/reference design, but its ACIA serial acceptance is
+still pending. The HD6309 wire-wrap board
 remains the primary artifact: a self-contained, fully inspectable companion
 with local RAM/ROM, serial diagnostics, trace memory, watchdog, and visible
 fault state. Controller emulation comes only after the observation path is
@@ -42,7 +43,7 @@ Start here:
   gates before active hardware is introduced.
 - [First-approach build](FIRST-APPROACH-BUILD.md) turns the on-hand parts
   inventory into a staged HD6309 wire-wrap bench build, preceded by the
-  M6x09-II-SBC reference-platform acceptance path.
+  M6x09-I-SBC reference-platform path.
 - [W65C02SXB live-play specification](W65C02SXB-LIVE-PLAY-SPEC.md) defines an
   alternative rapid-prototyping path using an SXB and a small XBus daughterboard.
 - [Master Component rebuild readiness](MASTER-COMPONENT-REBUILD-READINESS.md)
