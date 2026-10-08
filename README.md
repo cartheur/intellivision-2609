@@ -4,20 +4,22 @@ This is a working archive and development workbench for the original
 Intellivision Master Component: its CP1600-family architecture, the Intellivision
 II and ECS ecosystem, repair material, software, and new hardware experiments.
 
-The immediate project focus is a new computer system that works with an
-Intellivision II and its ECS. It begins with a verified, memory-mapped serial
-monitor and can grow into keyboard-aware software, expandable memory, storage,
-and host communication. The design deliberately treats a safe electrical
-interface as the first milestone, not an assumption.
+The immediate project focus is a wire-wrapped HD6309 companion for a 2609 that
+supports live-play research. It begins as a standalone, observable computer,
+then adds passive video/controller observation and fail-safe controller
+emulation for real games; a host may later supply learning and analysis. The
+2609 remains the game and display authority. The Intellivision II/ECS path is a
+separate corroborative compatibility track for keyboard, expansion, and
+bus-connected computer experiments.
 
 ## Start here
 
 - [Documentation summary](DOCUMENTATION-SUMMARY.md) is the contextual index to
   the console manuals, processor references, component data, historical
   engineering files, SDK, ROM collection, and current notes.
-- [Custom ECS-connected computer system](custom/README.md) is the focused
-  design brief: goals, unresolved interface evidence, serial prototype,
-  software roles, staged development, and safety constraints.
+- [Custom Intellivision companion computer](custom/README.md) is the focused
+  design brief: the primary 2609 live-play path, its evidence and safety gates,
+  and the separate ECS compatibility track.
 - `docs/CP1600-Agent-Index.md` is the concise guide to CP1600 registers,
   instructions, bus signals, timing, and CP1680 I/O behavior.
 - `manuals/Intellivision_Service_Manual_Model_2609.pdf` is the primary repair
@@ -25,11 +27,14 @@ interface as the first milestone, not an assumption.
 
 ## Working principles
 
-The CP1600 uses a multiplexed address/data bus; address latching, bus-control
-qualification, data direction, and timely bus release are essential. For an
-ECS-connected design, confirm the exact model, expansion signals, address map,
-voltage levels, power budget, and ownership of every shared signal before
-connecting active hardware.
+The first live-play work uses passive video/controller observation and must
+leave the console functional when the companion is absent, unpowered, reset,
+or faulted. Controller emulation must default to neutral and have explicit
+human takeover. The CP1600 uses a multiplexed address/data bus; address
+latching, bus-control qualification, data direction, and timely bus release
+are essential for any later ECS or console-bus design. Confirm the exact model,
+expansion signals, address map, voltage levels, power budget, and ownership of
+every shared signal before connecting active bus hardware.
 
 Primary manuals, schematics, data sheets, and observed behavior of the board on
 the bench take precedence over a later summary or a historical proposal.
