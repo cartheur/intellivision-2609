@@ -1,0 +1,979 @@
+Revised: 8/6/80
+
+8 713/80
+TO: Dave Chandler
+FROM: © Marie Butler-Knight
+RE: Keyboard Component Service Manual (edited & restructured)
+
+DATE: June 5, 1980
+
+ERONT COVER
+
+(LEGAL COPY)
+
+Wo. 1149-0380
+
+Mattel Electronics®
+
+INTELLIVISION™ Intelligent Television
+
+Keyboard Component
+
+SERVICE
+
+MANUAL
+
+KEYBOARD COMPONENT SERVICE MANUAL
+
+PAGE 1
+
+KEYBOARD COMPONENT
+
+SERVICE INSTRUCTIONS
+
+I, Is the TV set working? . 6 ss ee e
+
+II. Check out the Master Component
+(Does it perform with cartridge ihserted?). .
+
+III. Check out the Keyboard Component
+(Does it perform with caceeete inserted?) a.
+
+/Tf Keyboard Component DOES NOT check out, find 7
+out which major sub assembly is at fault. /
+
+© Keyboard Component GO/NO go?
+(Uae Test Cartridge to MELE sure logic board
+
+works properly.) og fee 8 Ss
+
+© Typewriter keys?( Do they all work?) . . «
+
+© Tape Test (Check total tape operation-
+reading AND pleyback.) . «
+
+Iv. Details of Assembly end Disassembly. . - ~
+V. Diagrams and Figeres . 6 1 ee ee
+
+Tools and Equipment Needed
+
+0 %-inch nut griver
+
+Phillips Head screwdriver
+
+°
+
+© High Impedance (20,000S%/v) VOM Meter,
+
+© Video Test Cartridge(Mattel Part No. 1718)
+
+°
+
+Demonstration Cessette
+
++ Page
++f Page
++ + Page
+
+« « Page
+
++ + Page
+
++ + Page
+
++ + Page
+
+«+ Page
+
+1% accurac
+
+°
+
+Keyboard Component Test Cartridge ( Mattel Part No,
+
+Keyboard Test Cassette (Mattel Part No,3398 )
+
+x
+
+3399)
+KEYBOARD COMPONENT SERVICE MANUAL PAGE 2
+
+PaRTS LIST
+Mattel Part No.
+
+COMPUTER [] ASSEMBLY (LOGIC BOARD) 1149-9809
+KEYBOARD ASSEMBLY 1149-9349
+SWITCHING POWER SUPPLY ASSEMBLY (POWER BOARD) 1149-9219
+TAPE CONTROL ASSEMBLY 1149-9239
+TAPE DECK ASSEMBLY w 1149-9129
+TRANSFORMER ASSEMBLY , 1149-9269
+UPPER HOUSING 1149-6119
+LOWER HOUSING 1149-2109
+MICROPHONE WITH STAND 1149-2499
+RF ADAPTER 1149-9059
+FUSE, 3AG, NORMAL, 5A, 250V 0089-0803
+ADHESIVE FOOT 2609-9489
+PORT COVER 1149-2139
+INSULATOR, TAPE CONTROL 1149-0230
+KNOB, VOLUME CONTROL 1119-2039
+PHILLIPS PAN HEAD SCREW 0405-0304
+10-16 X 1/2
+
+(TAPE DECK ASSEMBLY TO UPPER HOUSING)
+
+PHILLIPS PAN HEAD SCREW 0405-0284
+B-18 X 5/8
+
+(KEYBOARD ASSEMBLY TO UPPER HOUSING)
+(TRANSFORMER RECEPTACLE TO LOWER HOUSING)
+(TAPE CONTROL ASSEMBLY & COMPUTER)
+
+{LOGIC ASSEMBLY TO LOWER HOUSING)
+
+(UPPER HOUSING TO LOWER HOUSING)
+
+PHILLIPS PAN HEAD SCREW 0405-0314
+10-16 x 3/8
+(TRANSFORMER ASSEMBLY TO LOWER HOUSING)
+
+KEYBOARD COMPONENT SERVICE MANUAL PAGE 2A
+
+Parts List (cont)
+
+Mattel Part No.
+
+PHILLIPS PAN HEAD SCREW 0405-0294
+8-18 x 5/16
+
+(SWITCHING POWER SUPPLY ASSEMBLY
+
+TO LOWER HOUSING)
+
+PHILLIPS PAN HEAD SCREW ' 0405-0354
+8-18 x 1/2
+
+(MASTER COMPONENT TO KEYBOARD COMPONENT)
+
+CONICAL WASHER, 0405-0474
+(KEYBOARD ASSEMBLY TO UPBER HOUSING)
+
+CABLE TIE, 3 INCHES 0405-078),
+COMPRESSION RINGS Oh05-057h
+
+FOR ADDITIONAL INFORMATION CALL THIS TOLL-FREE NUMBER:
+(800)- 421-2826
+EXCEPT CALIFORNIA. WITHIN CALIFORNIA, CALL COLLECT.
+
+(213) 644-2752
+L From MC or KC
+
+CVG L LY FEST SEeErvr
+
+“et
+
+Th y \Asv ow
+
+AEGEP pod
+
+AIG 2 WASTER COMPOMENT TEST SETUP
+
+Ley ant
+
+AC fer Tv a i
+| | pe
+
+4 fe |
+
+FIG Z KEY EORED COMPONMELT TEST SETUP
+KEYBOARD COMPONENT SERVICE MANUAL PAGE 3
+
+DIAGNOSTIC ROUTINE
+SECTION I--Is the TV Set workine?
+
+1, Connect TY to AC power source and connect TV antenna terminals to
+
+Antenna Switch Unit (ASU) as shown in figure below.
+
+(PIX—Block diagram of TV Test Setup)
+
+Set TV/GAME switch on ASU to TV and turn on the TV sec. Make sure
+
+that video and audio of TV set are functioning properly.
+
+3. If there is no broadcast signal, test ASU by bypassing it and connecting antenna
+directly to TV. Replace or repair ASU if required.
+4, All other problems with TV set, repair TV.
+
+section 11 - Cheek out the MASTER COMPONENT
+
+This test verifies operation of the Master Component when connected to
+Keyboard Component.
+
+1. Connect TV, ASU, Master Component and Keyboard Component as shown in
+Figure A, page 0 and the diagram below.
+(PIX—Block diagram of Keyboard Component Test Setup)
+
+2. Insert Master Component TEST — Cartridge into Cartridge Port of
+
+Keyboard Component.
+
+Turn TV set on, Set TV/GAME switch to GAME position.
+
+4, Set ON/OFF switch of Master Component to ON position and press RESET button.
+
+5. Select cartridge by typing letter key "C". Press RETURN key.
+KEYBOARD COMPONENT SERVICE MANUAL PAGE 4
+
+6. Verify that Master Component is OK by conducting diagnostic program as
+
+described in Master Component Service Manual 2609-0380.
+
+If Master Component tests OK with Diagnostic Cartridge, proceed to
+
+Keyboard Component check out, Section III.
+If Master Component does NOT test OK, proceed with Steps A- F, below.
+
+A, Remove Master Component from Keyboard Component, Refer to Section IV,
+
+"Details of Disassembly", page __, and Figure B, page _.
+B. Connect TV, ASU and Master Component as shown in diagram below.
+(PIX—Block diagram of Master Component Test Setup)
+
+C. Insert Master Component Diagnostic Cartridge into Master Component,
+
+as shown in Figure A, page 0.
+
+D, Turn TV set ON. Set TV/GAME switch to GAME position, Set ON/OFF
+
+switch of Master Component to ON position and press RESET button.
+
+E. Conduct diagnostic routine and repair (if required) in accordance
+
+with Master Component Service Manual 2609-2380.
+
+FP, Repeat Master Component Verification Steps 1-6 to verify that
+
+Master Component performs OX with Keyboard Component.
+
+NOTE: If e Mester. Component. that is known to be OK does not work in Steps
+
+1 = 6, proceed with Keyboard Component Diagnostic Routine to resolve
+
+. problen.
+(box)
+
+(subhead)
+
+(subhead)
+
+KEYBOARD COMPONENT SERVICE MANUAL PAGE 5
+
+SECTION III ~ KEYBOARD COMPONENT Check Out
+
+IMPORTANT: THE TV SET AND MASTER COMPO!INT MUST BE VERIFIED AS COMPLETELY
+OPERATIONAL (KNOWN TO BE OK) BEFORE THE FOLLOWING TESTS OF THE KEYBOARD
+COMPONENT MAY BE CONDUCTED. REFER TO SECTIONS I AND IL.
+
+TURN ALL AUTOMATIC COLOR CIRCUITS TO MALUAL POSITION.
+
+SET UP
+
+Connect TV set, ASU, Master Component ard Keyboard Component a=" hown in Figure 3
+
+below and Figure A Test Set Up, page 0.
+(PIX—-Block Diagram of Keyboard Component)
+
+© Insert KEYBOARD COMPONENT TEST CARTRIDGE into RIGHT EAND
+receptacle at rear of Keyboard Component.
+
+© Set TV/GAME switch of ASU to GAME position.
+
+KEYBOARD COMPONENT GO/NoGO_TEST
+
+‘The following diagnostic routine will indicate on the TV screen which components
+of the Keyboard Component require service or replacement. Refer to Section IV
+
+for detailed instructions for servicing each module within the Keyboard Component.
+
+POWER TEST
+
+POWER UP, (Set ON/OFF switch on Master Component to ON.) Press RESET button.
+
+o If TV screen displays as follows, proceed to Locic Boaré Test.
+
+INTELLIVISION
+Tatelligent Television”
+
+sereen remains blank, follow this procedure:
+
+KEYBOARD
+
+NENT SERVICE MANUAL PAGE 6
+
+1, POWER DOWN. (Set
+
+N/OFF switch on Master Component to OFF.)
+
+2. Open Keyboard Component. Refer to Figures Band C, pages __ and
+(Observe that fuse Fl on switching power supply has not bTow
+Replace as’ required.)
+
+3. Set voltmeter for DC volts. Ure low voltage scale.
+
+4. POWER UP,
+4.1 Check that DC Yoltares are as specified in table’4.2
+
+Tate Dev UPPER + LOWER
+ie
+a5 45.15 as
+41 712,36
+
+“5 5
+
+4.2 Adjust DC Volteges to be as specified in table .2
+
+Dev UPPER LOWER
+Table =
+4.2 35 +5.05 Leds
++12 +#12.12 #12,86
+
+“5 No adjustment No adjustmeat
+
+HEYBOARD COMPONENT SER
+
+'
+A. IF +5, -5 AND #12 VCD ‘OLTASES ARS WITHIN LiNITS, TEE PROB-
+LEX IS THE COMPUTER IZ aSiy.(ioGi¢ BOARD.) Replace board as
+follows: POWER DOWN.Replarce logic board.(See Sec. IV, "Removal
+
+and Replecement of Logic Board," nave an. Figures D and
+
+POWER UP. TV Screen should display:
+
+I, pages and
+
+"“INTELLIVISON™ Intelligent Television’ , Proceed to Logic Board
+
+Test on page -
+
+B, IF ADJUSTING DC VOLTAGES TO LIMITS SPECIFIED IN STEP 4 ABOVE
+~ } . CAUSES THE TV SCREEN TO DISPLAY. "INTELLIVISION™ Intelligent
+
+Televisi proceed to. logic board test.
+
+C. IF THERE IS NO DC VOLTAGE PRESENT or if voltages cannot be adjusted
+within limits specified in Step 4, proceed as follows:
+| POWER DOWN, Disconnect cable between logic board end tape
+control assembly at 3 on tape control board. (Refer to
+Figure C, pane __.) Disconnect cable between power supply
+assembly and tape controi assembly at J2. POWER UP.Check
+
+that + 5V, +12 VDC, and -5 VOC ere within limits sveci-
+
+fied table L.l. adgist +5DC and +12 VDC voltages if
+
+necessary,
+REYBOARD COMPONENT SERVICE MANUAL PAGE 7
+
+1) IF DC VOLTAGES ARE NOI OK WHEN TAPE CONTROL BOARD IS DISCi
+
+PROCEED TO STEP 5.
+
+2) IF DC VOLTAGES ARE OK WHEN TAPE CONTROL BOARD IS DISCONNECTID,
+
+THE PROBLEM IS IN EITHER THE TAPS DECK. ASSEMBLY OR THE TAPE
+
+Proceed as follows:
+
+CONTROL _AS:
+
+POWER DOWN. Reconnect peer cable between tape control board and
+power supply board at J2. Disconnect two flat ribbon cables
+between cassette drive assembly and tape control board. (See
+Figure C, page _.) POWER UP. Check that DC voltages are within
+
+limits specified above in Step C.
+
+-@ TP DC VOLTAGES ARE OK OR CAN BE ADJUSTED TO BE OK, PROBLEM
+
+Is n TAPL DECX ASSEMBLY. POWER DOWN. Replace TAPE
+
+DECK assembly, (Refer to Section IV, "Removal and Replacement
+
+of TAPE DECK Assembly," page __ and Figure F, page __.
+Reconnect cable betweer logic board and tape control board.
+
+Return to page __ and restart POWER TEST program.
+
+@ IF DC VOLTAGES ARE NOT OK, proceed as follows:
+POWER DOWN. Replace tape control board. (refer to Section IV,
+“Details of Disassenby," page and Figure D, page __.)
+
+POWER UP, Assemble upper and lover cases of Keyboard Component
+loosely, (Master “Component may be replaced as shown in Figure H,
+
+page __.) Return to page __ and restart POWER TEST program.
+5. Set voltmeter to AC volts, POWER UP. Check for 17 to 23.VAC at test
+
+points on transformer cable connector at power supply board receptacle
+
+Jl. (@efer to F:
+
+re I, page _.
+
+A. IF AC VOLTAGE IS WITHIN 1770 23 VAC, THE PROBLEN 18 TE
+
+SUPPLY BOARD. Proceed as follows:
+
+POWER DOWN. Replace power supply board, (Refer to Section IV,
+
+| "Removal and Replacement of Power Supply Board, p- _., and
+Figures D and I, pages and.) |
+5.1 POWER UP,
+Check that DC volatares areas specified in table 5.1
+Table pov UPPER * LOWER
+Sel
++5 45015 Fh BS
+= Fe 412.36 FIT.6U
+= 5 =E.85
+5.2 POWER UP.
+Check that DC voltages can be adjusted as svecified in table 5.2
+DCV UPPER LOWER
+Table =
+‘5.2 2 45.05 _ ous
++12 #12,.12 #12.86
+: 5 No adjustment No adjustment
+| = co IF DC VOLTAGES ARE NOT ‘DX OR CAN'T BE ADJUSTED TO THE ABOVE
+
+LIMITS, THE LOGIC BOARD IS FAULTY. Proceed as follows:
+| POWER DOWN. Replace logic board. (See Section IV, page __ and
+
+Figure D, page _.) FOWER UP, Verify DC voltages are within
+
+limits specified above and proceed to Logic Board Test, page __.
+KEYBOARD
+
+°
+
+COMPONENT SERVICE MANUAL PAGE G-a
+
+IP bo VOLTA! TV SCREEN SHOULD INDICATE:
+
+TELLIVISION™
+Intelligent Television"
+
+Proceed to Logic Soard Test. if TV Screen is blank, but DC
+
+Voltages are OX, replace Logic Sard and proceed to Logic
+
+Board Test.
+
+IF AC VOLTAGE AT POWER SUPPLY RECEPTACLE IS NOT WITHIN 17
+to 23 VAC, check that AC Voltage at transformer female
+receptacle is 105 to 125 VAC, If so, The problem is in
+POWER TRANSFORMER and THE POWER SUP®LY 30ARD. Proceed
+
+TRE
+
+as follows:
+
+POWER DOWN, Replace power supply board. (See Section IV,
+page , and Figure I, page « ) Replace power
+transformer. (See Section IV, vace » and Figure I,
+
+pare.)
+
+POWER UP. Check AC Voltaze at power supply receotable J1
+
+is within 17 to 23 VAC.
+KEYBOARD COMPONENT SERVICE MANUAL PAGE 9
+
+(Tllus: TV screen displeys--"INTELLIVISION™ Intelligent Television"
+Check +5, -5 and +12 VDC voltages and adjust as required per
+Step 4, page 0. With DC voltages OK, the TV screen should indicate;
+"INTELLIVISION™
+Intg}iiren Relevis io " Proceed to Logic Board Test. If TV screen is
+
+ank but DC voltages are OK, replace logic board (See Section IV,
+page __.) and proceed to Logic Board Test.
+
+LOGIC BOARD TEST
+
+Logic testing is self programmed and does not require prompting from the
+operator, Upon completion of logic testing, a menu of the tests is displayed
+
+on the TV screen, which requires the operator to select either a KEYBOARD or
+
+TAPE test.
+
+1, Self programmed logic testing is initiated by a POWER UP condition, but may also
+
+require that the RESET button on the Master Component is pushed
+
+‘ogic testing
+
+is indicated by the following legend:
+
+(computer EXECUTING SELF TEST - PLEASE STANDBY
+type)
+followed shortly by:
+pul -uP
+cpu2-uP
+
+CHECKING LOGIC BOARD
+
+(Nlus: TY sebeen displays-: @ SELF THST--PLEASE STAND 3y"
+2, Testing various logic circuits is indicated on the TV screen by the sequential
+
+addition of a legend to the above legend, identifying the logic. Additionally, an
+
+asterisk indicates the circuit under test.
+
+‘A, “A SUCCESSFUL TEST is indicated by displaying the word PASS to the
+right of the logic description, The self test then moves on to the
+
+next circuit and adds it to the list. A typical display is as follows:
+EEYBOARD COMPONENT SERVICE MANUAL PAGE 9-A
+
+(1)
+*
+TYPE "I",
+properly inserted. The 1
+should be this:
+‘qEsT DIAGNOSTICS”
+
+@ is NOT displayed, verify that cartridge is properly
+
+then RETURN to verify that Diagnostic Cartridge is
+ast cormand displayed on the TV screen
+
+If commant
+inserteds
+
+Should "Test Diagnostics" command still not appear, replace
+the logic board. When command does apnear, initiate the auto-
+
+matic testing sequence by pressing "TEST". Followed by RETURN.
+
+IMPORTANT NOTE:
+while it performs the self-test.
+
+Leave computer 4
+Do Nor press any key until directéd to do so, You could
+well cause the wrong diagnostic message.
+KEYBOARD COMPONENT SERVICE MANUAL PAGE 10
+
+(lus: TV set with messace "HR
+ePUL,
+
+(computer cPu2 -UP
+type)
+
+CHECKING LOGIC BOARD
+
+* HR GRAPHICS RAM -PASS
+
+or
+CPU1-UP ==
+cPU2 -UP.
+
+CHECKING LOGIC BO,.RD
+HR GRAPHICS RAM -PASS
+
+‘* KEYBOARD I/O PORT = PASS Fy
+
+B, A FAILED LOGIC TEST {s indicated as described above except che
+word FAIL is displayed and corrective action is displayed in a
+
+BLUE BOX at the bottom of the screen, A typical FAIL display 1s as follows:
+
+cPUl1-uP
+(computer cpu2 -UP
+type)
+CHECKING LOGIC BOARD
+‘* HR GRAPHICS RaM PAIL
+
+ACTION > REPLACE LOGIC BOARD
+
+(Tllusy TV set with meswage "REPLACE LOGIC BOARD--FAIL")
+The indicated corrective steps should be Garried out in the order given
+
+and the test program started again by the POWER UP sequence.
+
+C. WHEN SELF TESTING HAS BEEN COMPLETED, TV screen will display:
+"SELF TEST COMPLETE--PLEASE STAND SY"
+
+After a brief pause,TV screen will displey « menu of tests
+as follows:
+
+‘computer TEST 1 =-KEYROARD
+
+ie TEST 2 +- TAPE
+
+WHICH TEST?
+
+REYBOARD COMPONENT SERVICE MANUAL PAGE iL
+
+: TYPEWRITER KEYS--do they all work?
+
+The K
+when
+
+vooard Test is Snitiated by pressing the number 1 key
+
+test menu is displayed on the TV screen,
+
+The.TV screen will display graphics representing the keyboard.
+(PIX—Keyboaré Graphics)
+1, IF THE KEYBOARD IS OK, each character on the TV screen will block out
+
+wher
+
+the corresponding key is depressed. The end product of an OK
+keyboard is a solid colored block for each character or key. When |
+
+{ all characters have been blocked out, depress the CLEAR SCREEN key
+
+twice. This causes the test menu to be displayed again so that you
+
+ean go on to the Tape Test, 4
+
+"(The space bar key is indicated at the top lett of the
+display gravhics, Such es a". " character.) —
+
+(2IX—Keyboard Graphics for OX keyboard)
+
+1 NOTE: This test is best accomplished by running a fingernail along
+
+each row of keys on the keyboard, depressing each and every key in turn.
+
+2, IF THE KEYBOARD IS NOT OK, characters on the TV screen will not block
+out when depressed. Characters remaining on the screen may be tested
+by depressing the appropriate key. The corrective action for a
+keyboard that is NOT OK is as follows:
+A. POWER DOWN
+
+3B. Replace keyboard. (Refer to Section IV, "Removal and Replacement
+of Keyboard," page _, and Figure £, page __.)
+
+€. POWER UP AND RESTART KEYBOARD TESTS AGAT:
+D, Select Keyboard test again. If Keyboard test again indicates a
+
+bad keyboard, replace the logic board (see Section IV, page _)
+and resume testing at Section III, page. 3
+
+KEYBOARD COMPONENT SERVICE MANUAL PAGE 12
+
+The Tape Test is initiated by pressing the number 2 key
+» when the test menu is displayed on the TV screen.
+1, Upon initiating the Tape Test, the TV screen will display the
+following legend:
+(computer PROCEED WITH DRIVi MAINTENANCE
+
+type) 5
+DEPRESS CLRSCRN? CLRSCRN) WHEN DONE
+
+2, The cassette drive will eject the tape and proceed into Play mode. If
+
+the Eject mode fails, carry out the following corrective steps in the
+
+order given, (Refer to Section IV, pages __ and __, and Figures D and F, pages
+
+and __.)
+
+REPLACE TAPE DECK ASSEMBLY
+REPLACE TAPE CONTROLLER
+
+REPLACE LOGIC BOARD
+
+After each step, run through the entire test procedure again starting with
+
+the POWER UP sequence. If necessary, depress the RESET button on the
+
+Master Component after POWER UP.
+
+3, Drive maintenance should be conducted as follows:
+
+A. Cassette drive will enter the Playback mode with cassette holder
+
+raised. Clean the heads, capstan and pinch roller with alcohol and
+
+a clean cotton swab, as described in the owner's manual.
+
+NOTE: Be sure to apply the swab to the right (from front) side of
+
+the capstan and pinch roller, NOT the left.
+
+B, Visually verify heads are moyed forward to Playback position.
+
+©, Visually verify tape reel’ drive shaft is rotating.
+KEYBOARD COMPONENT SERVICE MANUAL PAGE 13
+
+Minimin Tape Test is initiated by pressing CLEAR SCREEN key twice upon
+
+completion of drive maintenance operations. The minimum tape test is
+
+self-programmed and requires the use of the Demonstration Cassette.
+
+A, Insert the Demonstration Cassette and manually close cassette housing
+door.
+
+B. The minimum test program will test all tape functions, including
+
+pre-recorded and home-recorded digital tracks.
+
+The Home Audio Test will be presented automaticafly upon satisfactory
+completion of the Minimm Tape Test. The Home Audio Test requires that
+
+you plug the microphone into the microphone jack on the Keyboard Component.
+
+A. A menu of tests will be presented on the TV screen, indicating which
+LETTER keys on the keyboard you should depress to activate the
+cassette drive in all tape operation modes. Example: the letter
+
+E will appear under Eject.
+
+(PIX—graphic display for Home Audio Test)
+
+B. The user can manually check each tape operation mode of the cassette
+drive in order to locate faults or verify correct operation of the
+home-recorded audio tracks only, If the cassette drive fails in any
+mode, carry out the following corrective steps in the order given:
+
+REPLACE TAPE DECK ASSEMBLY
+REPLACE TAPE CONTROLLER
+
+REPLACE LOGIC BOARD
+
+AFTER REPAIRS TO THE UNIT HAVE BEEN COMPLETED, THE UNIT SHOULD BE BUTTONED UP
+
+AND THE CASSETTE INSERTED, it RETURN TO STAR’
+
+ALL FUNCTIONS BEFORE DELIVERING THE KEYBOARD COMPONENT TO THE CUSTOMER.
+
+AL TEST OF
+KEYBOARD CONTORENT
+
+g 1. REMOVAL OF MASTER COMPONENT I'ROM KEYBOARD COMPONENT.
+Remove pover cord plug of *eyboard Component from
+
+wall outlet.
+
+Unplug RF adaptor from Master Component via Keyboard
+Component opening. =a
+
+Make certain that both hani-held controllers are in
+place on the Master Compon:nt:
+
+Turn the entire assembly upside-down. told Master
+Component in place with onz hand while unscre ‘ng
+the five 8-8 1/2" interconiecting screws show" in
+figure B, page . (Use ® shillips head screwdriver)
+After all five screws have been removed turn the
+entire assembly right side up.
+
+Ease the Master Component out of the Keyboard
+Component recessed area, drawing excess ribbon cable
+and power cord from their respective storage pockets.
+
+Unplug Master Component power cord from Keyboard
+: Component mating receptacle. (See Figure )
+
+=" G.. Remove. Keyboard Component signal connector plug from
+the Master Component cartridge port. (See Figure 3
+
+H. Set the Master Component aside.
+2. SEPARATION OF KEYBOARD COMPONENS UPPER AND LOWER HOUSINGS
+
+. A. Remove Master Componént from Keyboard Component as
+described in paragraph 1.
+
+B. Turn Keyboard Component upside-down.
+
+C, Remove the nine 8-18 X 5/8" screws which connect the
+upper and- lower housing assemblies together (See
+figure B). (Use 2 phillips head screwdriver).
+
+Place Keyboard Component cn side and carefully seperate
+i the upper and lower housirgs.
+
+Place the units as shown in figure C with the upper
+housing upside dovn positioned next to the lower
+housing so that the fronts of the two housings are
+
+. touching.
+
+PACE 1g
+
+Bi:
+
+4,
+
+REMOVAL AND REPLACEMENT OF COMPUTER IZ ASSEMBLY (SEE
+
+FIGURE D) ¢
+
+A. Unplug Computer II power e:ble from switching
+power supply assembly. ‘ :
+
+B. Unplug Computer FI tape cortrol ‘signal cable from
+tape control assembly.
+
+©. Remove the nine 6-16 X 5/8" screws which hold t .¢ Computer
+II assembly in place.
+
+D. Unplug Keyboard cable connestor fran Computer II. (See
+Figure B,
+
+E. Lift Computer II assembly cut of lower housing.
+
+F. Install replacement Computer II assembly by
+reversing steps . through A.
+
+REMOVAL AND REPLACEMENT OF TAPE DECK ASSEMBLY (SEE
+FIGURE F) .
+
+A. Unplug the two 9 conductor flat ribbon cables from
+the tape control assembly.
+
+B. Unplug the 9 conductor and the two conductor cables
+from the preamp subassembly of the tape deck
+» assembly.
+
+C. Remove the °. 10-16 X 1/2" screws which hold the
+tape deck assembly in place. E
+
+D. Manually depress cassette eject solenoid until the
+tape cover opens.
+
+E. Remove tape deck assembly from the upper housing.
+F. -Install replacement tape ¢ack assembly by reversing
+steps E through A.
+
+REMOVAL AND REPLACEMENT OF SVITCHING POWER SUPPLY ASSEMBLY
+
+A. Unplug Computer II power cable from switching power
+supply (see figure D).
+
+B. Unplug tape control assembly power cable from
+switching power supply.
+‘3
+2
+
+3
+a
+we
+a
+
+: MBYSOARD ©
+
+VICE
+
+etor from switching
+
+Unplug transformer assenbly son
+power supply.
+
+Unplug Computer II tape control cable from tape
+control assembly and fold bock across top of Computer
+
+II assembly :
+
+Remove the three 8-18 X 5/1€" screws which hold the
+switching power supply in place:
+
+Remove switching power supply from the lower housing.
+
+G. Install replacement switching power supply by
+reversing steps F through A.-
+
+6. REMOVAL AND REPLACEMENT OF TRANSFORMER ASSEMBLY
+
+Unplug transformer assembly connector from switching
+power supply.
+
+Remove the two 8-18 X 5/8" screws holding the
+transformer assembly female receptacle in place.
+
+Remove the four 10-16 X 3/8" screws securing the
+transformer assembly to the lower housing.
+
+D. Remove transformer assembly from lower housing.
+
+Install replacement transformer assembly by reversing
+steps D through A.
+
+7. REMOVAL AND REPLACEMENT UF KEY3OARD ASSEMBLY
+
+Unplug Keyboard cable from Computer II assembly.
+
+Remove the six 8-18 X 5/8" screws which secure the
+Keyboard to the upper housing. Be careful not to lose
+the six conical ramp washers.
+
+Remove the Keyboard assembly from the upper housing.
+
+D. Install replacement Keyboard-by reversing steps C
+é through A. i
+
+8. REMOVAL AND REPLACEMENT OF TAPE CONTROL ASSEMBLY
+
+1 A. At the tape control assembly, unplug the two, 9-
+. conductor flat ribbon cables connecting the tape ,
+
+deck assembly. -
+
+om B. At the tape deck assembly, unplug the 9-wire and the
+PAGE 17
+
+KEYBOARD COMPOMINT SERVICE MANUAL
+
+2-wire cables connecting the tape control assembly.
+
+At the tape control assenbly, unplug the 20-conductor
+flat ribbon cable connecting the Computer II assembly.
+
+At the switching power supply assombly, unplug the 6-
+conductor flat ribbon cable connecting the tape control
+assembly.
+
+D
+Remove the three 8-18 5/8" screws which secure the tape
+control assembly t6 the lower housing.
+
+Remove the tape control assembly by tilting the , aboard
+edge of the assembly-upward ro that it clears t=
+transformer assembly, while roving the assembly inboard
+to allow the volume control knobs to be withdrawn from
+the side of the lower housing.
+
+Replace the tape control assembly by reversing steps F
+through A.
+
+t SpeTION VIVE
+
+RIQURES AND DIAGR.
+
+a
+
+Add lllustration vage:
+
+(Bxploded view of ke ard cvmponent with
+identifying fe. ure ea; tions)
+
+;
+i
+1
+H
+t
+;
+
+{
+
+Figure E
+Removal of Keyboard
+
+KEYCONED StevECO BY ax
+sceews Ya" Lowe “vino
+ISOLATING WASHES
+
