@@ -14,4 +14,6 @@ Intellivision 2609 autonomous player - Where everyone who has interest can play 
     1102: Established the sets of ROMs for the "os" layer.    
 06.10.2026
     1731: Removed sdk and emulator code since already parsed into the organization as separate entities.
+08.10.2026
+    1647: Updated to what I think is the totality of prepatory work. From here are blue skies.
     
