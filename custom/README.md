@@ -5,6 +5,9 @@
 - [Master Component rebuild readiness](MASTER-COMPONENT-REBUILD-READINESS.md)
   distinguishes the preserved console firmware and documentation from the
   implementation artifacts still needed for a source-buildable #2609 replica.
+- [Live-play cyberneticist working proposal](LIVE-PLAY-CYBERNETICS-PROPOSAL.md)
+  sketches a safe, traceable HD6309/host companion system for observing and
+  participating in original Intellivision gameplay.
 
 This project proposes a new computer system that works alongside an
 Intellivision I or II with its Entertainment Computer System (ECS). The objective is
