@@ -47,14 +47,15 @@ The set of all manufactured Intellivision systems during the period of Mattel, i
 
 | Hardware | Model number(s) |
 |---|---|
-| Mattel Intellivision / Master Component | 1591, 2609, 3668, 3999, 5154, 5155, 5156, 5370, 5379 |
+| Mattel Intellivision / Master Component | 2609, 2609A, 2609B, 3668 |
+| Intellivoice Speech Synthesis Module |	3330 |
+| Keyboard Component (unreleased) | 1149 |
+| Mattel Intellivision II | 5872, 5878 |
+| Entertainment Computer System (ECS) | 4182, 4184, 4187, 4629, 4631, 4690 |
+| System Changer | 4610 |
 | GTE/Sylvania Intellivision | MC100 |
 | Sears Super Video Arcade | 49-75011, 49-75022 |
 | Radio Shack Tandyvision | 58-100 |
 | Bandai Intellivision | 16287 |
 | Digiplay Intellivision | 5368 |
 | Digiplay II | 5872 |
-| Mattel Intellivision II | 5872, 5878 |
-| Entertainment Computer System (ECS) | 4182, 4184, 4187, 4629, 4631, 4690 |
-| System Changer | 4610 |
-| Keyboard Component (unreleased) | 1149 |
