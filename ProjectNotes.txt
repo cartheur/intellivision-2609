@@ -17,3 +17,5 @@ Intellivision 2609 autonomous player - Where everyone who has interest can play 
 08.10.2026
     1647: Updated to what I think is the totality of prepatory work. From here are blue skies.
     1728: Workplan and arxiv draft ready.
+10.10.2026
+    1246: Focusing around the workplan that is sorely needed.
