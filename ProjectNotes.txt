@@ -15,6 +15,7 @@ Intellivision 2609 autonomous player - Where everyone who has interest can play 
 06.10.2026
     1731: Removed sdk and emulator code since already parsed into the organization as separate entities.
 08.10.2026
+    1437: My first Intellivision has arrived! ;-) 
     1647: Updated to what I think is the totality of prepatory work. From here are blue skies.
     1728: Workplan and arxiv draft ready.
 10.10.2026
