@@ -22,4 +22,6 @@ Intellivision 2609 autonomous player - Where everyone who has interest can play 
     1246: Focusing around the workplan that is sorely needed.
 12.10.2026
     1836: Gathered more details in a separate 5872 repo, including the ECS.
+06.11.2026
+    1236: Tier-00 (foundational) and Tier-01 (Preps) done.
     
